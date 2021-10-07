@@ -1,0 +1,35 @@
+.card-container-col{
+    text-align: center;
+    border: 1px solid white;
+    background-color: white;
+    width: 30%;
+}
+
+.card-image{
+    width: 50%!important;
+    margin: auto;
+    padding: 25px 0 0px 0;
+}
+
+.card-detail-container{
+    text-align: center;
+    margin: 5%;
+}
+
+.club-title{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.club-type{
+    color: gray;
+}
+
+.explore-btn{
+    background-color: #2828ff;
+    border: 1px solid #2828ff;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    padding: 5px 25px;
+}
