@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
 
 .single-club-container{
-    background-color: #272a4e;
+    background-color: #ffffff;
 }
 
 .team-detail-container{
-    color: white;
 }
 
 .team-container{
@@ -40,3 +39,12 @@
     width: 100%;
 }
 
+.social-icons{
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.details p{
+    text-align: justify;
+}

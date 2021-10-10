@@ -1,9 +1,17 @@
 import React, {useEffect, useState} from 'react';
-import {useParams} from "react-router-dom";
+import {Link, Redirect, useParams} from "react-router-dom";
 import Header from "../Header/Header";
 import "./SingleClubDetail.css";
-import {faCalendarAlt , faMapMarkerAlt, faFutbol, faMars, faUsers} from "@fortawesome/free-solid-svg-icons";
+import {
+    faCalendarAlt,
+    faMapMarkerAlt,
+    faFutbol,
+    faMars,
+    faUsers,
+    faArrowCircleRight
+} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { BsYoutube, BsFacebook, BsTwitter } from "react-icons/bs";
 
 const SingleClubDetail = () => {
     let { idTeam } = useParams();
@@ -13,8 +21,14 @@ const SingleClubDetail = () => {
         fetch(`https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${idTeam}`)
             .then(res => res.json())
             .then(data => setTeam(data.teams[0]))
-        console.log(team);
+        //console.log(team);
     },[idTeam])
+
+    const handleClick = (link) =>{
+        // window.location(link);
+        /*<Redirect to={link}/>*/
+        console.log(link);
+    }
 
     return (
         <div className="single-club-container">
@@ -41,12 +55,16 @@ const SingleClubDetail = () => {
                         </div>
                     </div>
                 </div>
-                <div className="container">
+                <div className="container details">
                     <p>{team.strStadiumDescription}</p>
                     <p>{team.strDescriptionEN}</p>
                 </div>
+                <div className="social-icons">
+                    <BsTwitter onClick={()=> handleClick(team.strTwitter)} style={{color:"#1d9bf0", marginRight:"20px"}}/>
+                    <a href={team.strTwitter}><BsYoutube style={{color:"red", backgroundColor:"white", marginRight:"20px"}}/></a>
+                    <BsFacebook style={{color:"#1877f2", backgroundColor:"white"}}/>
+                </div>
             </div>
-
         </div>
     );
 };
