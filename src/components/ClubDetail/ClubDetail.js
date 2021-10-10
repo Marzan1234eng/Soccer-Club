@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, Col, Container, Row} from "react-bootstrap";
+import {Card} from "react-bootstrap";
 import './ClubDetail.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Link, Redirect, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import Header from "../Header/Header";
 import "./SingleClubDetail.css";
 import {
@@ -7,8 +7,7 @@ import {
     faMapMarkerAlt,
     faFutbol,
     faMars,
-    faUsers,
-    faArrowCircleRight
+    faUsers
 } from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { BsYoutube, BsFacebook, BsTwitter } from "react-icons/bs";
@@ -21,12 +20,9 @@ const SingleClubDetail = () => {
         fetch(`https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${idTeam}`)
             .then(res => res.json())
             .then(data => setTeam(data.teams[0]))
-        //console.log(team);
     },[idTeam])
 
     const handleClick = (link) =>{
-        // window.location(link);
-        /*<Redirect to={link}/>*/
         console.log(link);
     }
 

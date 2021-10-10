@@ -1,7 +1,6 @@
 import React from 'react';
 import stadium from "../../images/stadium.jpg";
 import './Header.css'
-import {BsFacebook, BsTwitter, BsYoutube} from "react-icons/bs";
 
 const Header = (props) => {
     const {banner,strStadium} = props;
