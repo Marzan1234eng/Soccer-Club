@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+
+.single-club-container{
+    background-color: #272a4e;
+}
+
+.team-detail-container{
+    color: white;
+}
+
+.team-container{
+    border: 1px solid #4b5fee;
+    background-color: #4b5fee;
+    border-radius: 5px;
+    padding: 25px 0;
+    margin: 50px auto;
+    display: flex;
+}
+
+.team-container p{
+    font-weight: bold;
+}
+
+.league-name{
+    font-family: 'Ephesis', cursive;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 33px;
+}
+
+.team-container-icon{
+    margin: 0 10px 0 25px;
+}
+
+.team-img{
+    float: right;
+}
+
+.team-img img{
+    width: 100%;
+}
+

@@ -1,9 +1,12 @@
 import React from 'react';
 import {Card, Col, Container, Row} from "react-bootstrap";
-import './ClubDetail.css'
+import './ClubDetail.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
+import {Link} from "react-router-dom";
 
 const ClubDetail = (props) => {
-    const {strTeamBadge, strTeam, strSport} = props.club;
+    const {strTeamBadge, strTeam, strSport, idTeam} = props.club;
     return (
         <div class="col-md-4">
             <Card className="card-detail-container">
@@ -13,7 +16,11 @@ const ClubDetail = (props) => {
                     <p className="club-type">
                         Sports Type: {strSport}
                     </p>
-                    <button className="explore-btn">Explore</button>
+                    <Link to={"/team/"+idTeam}>
+                        <button className="explore-btn">
+                            Explore<FontAwesomeIcon className="arrowIcon" icon={faArrowCircleRight} />
+                        </button>
+                    </Link>
                 </Card.Body>
             </Card>
         </div>

@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import ClubDetail from "../ClubDetail/ClubDetail";
 import {Card, CardGroup, Col, Container, Row} from "react-bootstrap";
 import './Club.css';
+import Header from "../Header/Header";
 
 const Club = () => {
 
@@ -18,19 +19,22 @@ const Club = () => {
     },[])
     console.log(club);
     return (
-        <div class="card-group-container">
-            <CardGroup class="row">
-                {
-                    club.map(cb =>
-                        <ClubDetail
-                            key={cb.idTeam}
-                            club={cb}
-                        >
+        <div>
+            <Header></Header>
+            <div className="card-group-container">
+                <CardGroup class="row">
+                    {
+                        club.map(cb =>
+                            <ClubDetail
+                                key={cb.idTeam}
+                                club={cb}
+                            >
 
-                        </ClubDetail>
-                    )
-                }
-            </CardGroup>
+                            </ClubDetail>
+                        )
+                    }
+                </CardGroup>
+            </div>
         </div>
     );
 };
