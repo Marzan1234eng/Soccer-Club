@@ -1,13 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import ClubDetail from "../ClubDetail/ClubDetail";
-import {Card, CardGroup, Col, Container, Row} from "react-bootstrap";
+import {CardGroup} from "react-bootstrap";
 import './Club.css';
 import Header from "../Header/Header";
 
 const Club = () => {
 
     const [club, setClub] = useState([]);
-    /*const {strTeamBadge, strTeam, strSport} = club;*/
     useEffect(()=>{
         fetch("https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=English%20Premier%20League")
             .then(res => res.json())

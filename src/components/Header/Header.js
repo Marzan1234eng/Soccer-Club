@@ -8,7 +8,7 @@ const Header = (props) => {
     const title = "Soccer Club";
     return (
         <div className="header-container">
-            <img className="head-image" src={banner ?? stadium} alt="stadium image"/>
+            <img className="head-image" src={banner ?? stadium} alt="stadium"/>
             <h4 className="head-text">{strStadium ?? title}</h4>
         </div>
     );
